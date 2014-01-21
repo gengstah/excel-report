@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title th:text="#{webapp.title}">Webapp ni Geng</title> 
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="icon" type="image/ico" href="../../images/favicon.ico" th:href="@{/images/favicon.ico}" />
+	<link rel="stylesheet" href="../../css/style.css" type="text/css" th:href="@{/css/style.css}" />
+</head>
+<body>
+	<div id="header" th:include="templates :: header"></div>
+	<div id="adbox">
+		<div class="clearfix">
+			<img src="../../images/cognoscenti.gif" alt="Img" height="342" width="368" th:attr="src=@{/images/cognoscenti.gif},title=#{company.name},alt=#{company.name}" />
+			<div>
+				<h1>PSEi Charts?</h1>
+				<h2>We got it.</h2>
+				<p>
+					StocksCharts is especially made to provide traders a tool to easily visualize their stocks. It offers free online services to enable investors to watch how their stocks behave in the Philippines Stock market. <span><a href="historical.html" class="btn" th:href="@{/historical/}">Check It Now!</a><b>Don't worry it's for free</b></span>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div id="contents">
+		<div id="tagline" class="clearfix">
+			<h1>Design With Simplicity.</h1>
+			<div>
+				<p>
+					<a href="schedule.html" th:href="@{/schedule/}">Schedules</a>
+				</p>
+				<p>
+					...
+				</p>
+				<p>
+					...
+				</p>
+			</div>
+			<div>
+				<p>
+					...
+				</p>
+				<p>
+					...
+				</p>
+				<p>
+					...
+				</p>
+			</div>
+		</div>
+	</div>
+	<div id="footer" th:include="templates :: footer"></div>
+</body>
+</html>
