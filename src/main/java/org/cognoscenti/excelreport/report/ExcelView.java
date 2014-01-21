@@ -17,6 +17,7 @@ public class ExcelView extends AbstractExcelView {
 	protected void buildExcelDocument(Map<String, Object> model,
 			HSSFWorkbook workbook, HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
+		response.setHeader("Content-disposition", "attachment; filename=test.xls");
 		Sheet sheet = workbook.createSheet("Hello");
 		Row row = sheet.createRow(0);
 		Cell cell = row.createCell(0);
